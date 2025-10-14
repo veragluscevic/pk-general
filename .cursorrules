@@ -1,0 +1,57 @@
+# Cursor AI Rules - Session Continuity System
+
+## MANDATORY BEHAVIOR
+
+### Session Start Protocol:
+1. ALWAYS read `/Users/veragluscevic/research/repositories/pk-general/complete_chat_history.txt` first
+2. Restore full context from previous sessions
+3. Continue seamlessly from where we left off
+4. Reference previous decisions and progress
+
+### Session End Protocol:
+1. ALWAYS save complete chat history to `complete_chat_history.txt`
+2. APPEND to existing content - NEVER overwrite
+3. Add clear session separators with timestamps
+4. Include every user message and assistant response verbatim
+5. AUTOMATICALLY save and commit ALL files created during session
+6. When user prompts "save chat history", immediately:
+   - Add all new/modified files to git
+   - Commit with descriptive message
+   - Ensure no data loss occurs
+
+### File Management:
+- Save all work to files, not just discuss it
+- Use version control (git) for important changes
+- Create documentation for complex decisions
+- Maintain project context through files
+- AUTOMATICALLY preserve all session work when saving chat history
+- Never lose any files created during the session
+
+### User Preferences:
+- Focus: Cosmology and astrophysics research
+- Use GitHub repositories for data analysis
+- Provide arXiv links for scientific topics
+- Always maintain session continuity
+- Save everything to prevent data loss
+
+### Scientific Standards:
+- Use only trusted scientific resources (arXiv, peer-reviewed journals, NASA/ESA data)
+- Provide citations and links when making scientific claims
+- Reference specific papers, datasets, and methodologies
+- Maintain scientific rigor in all analysis and conclusions
+- Rely on trusted sources (textbooks, arXiv, and similar) when researching astrophysics and cosmology concepts
+- When stating new facts or explaining concepts, provide links to citations when possible
+- We will be focusing on a research problem
+
+### Project Context:
+- Repository: `/Users/veragluscevic/research/repositories/starting-cursor`
+- Goal: Learn Cursor capabilities and implement session continuity
+- Next: Begin actual cosmology/astrophysics data analysis work
+- Critical: Never lose session context
+
+## EMERGENCY RECOVERY:
+If session is lost, read `complete_chat_history.txt` to restore full context.
+
+---
+*This file ensures consistent AI behavior across all sessions*
+
