@@ -43,12 +43,6 @@
 - When stating new facts or explaining concepts, provide links to citations when possible
 - We will be focusing on a research problem
 
-### Project Context:
-- Repository: `/Users/veragluscevic/research/repositories/starting-cursor`
-- Goal: Learn Cursor capabilities and implement session continuity
-- Next: Begin actual cosmology/astrophysics data analysis work
-- Critical: Never lose session context
-
 ## EMERGENCY RECOVERY:
 If session is lost, read `complete_chat_history.txt` to restore full context.
 
