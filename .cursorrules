@@ -2,11 +2,20 @@
 
 ## MANDATORY BEHAVIOR
 
+### Project Context:
+- Project Repository: `/Users/veragluscevic/research/repositories/pk-general`
+
 ### Session Start Protocol:
-1. ALWAYS read `/Users/veragluscevic/research/repositories/pk-general/complete_chat_history.txt` first
+1. ALWAYS read `complete_chat_history.txt` in the project repository first
 2. Restore full context from previous sessions
 3. Continue seamlessly from where we left off
 4. Reference previous decisions and progress
+
+### Session Management Rule:
+- ONE SESSION = ONE PROJECT: Each session focuses on a single project
+- Directory navigation does NOT change session context
+- Session context is determined by what we're actually working on, not current directory
+- Maintains clear project boundaries and prevents context contamination
 
 ### Session End Protocol:
 1. ALWAYS save complete chat history to `complete_chat_history.txt`
@@ -19,6 +28,20 @@
    - Commit with descriptive message
    - Ensure no data loss occurs
 
+## EMERGENCY RECOVERY:
+- If session is lost, read `complete_chat_history.txt` to restore full context
+- Check git log for recent commits if chat history is corrupted
+- Restore from last successful commit if needed
+
+### GitHub Authentication:
+- Prefer SSH keys over HTTPS tokens
+- If HTTPS fails, switch to SSH: `git remote set-url origin git@github.com:USERNAME/REPO.git`
+
+### Git Configuration:
+- Username: veragluscevic
+- Prefer SSH over HTTPS for GitHub remotes
+- Always set upstream tracking with `-u origin main`
+
 ### File Management:
 - Save all work to files, not just discuss it
 - Use version control (git) for important changes
@@ -27,12 +50,16 @@
 - AUTOMATICALLY preserve all session work when saving chat history
 - Never lose any files created during the session
 
+### Standard File Structure:
+- `complete_chat_history.txt` - Session continuity
+- `README.md` - Project documentation
+- `.cursorrules` - AI behavior rules
+- `{PROJECT_NAME}.md` - Project-specific notes
+
 ### User Preferences:
-- Focus: Cosmology and astrophysics research
+- Focus: Cosmology and astrophysics research or conference notes and exploration
 - Use GitHub repositories for data analysis
 - Provide arXiv links for scientific topics
-- Always maintain session continuity
-- Save everything to prevent data loss
 
 ### Scientific Standards:
 - Use only trusted scientific resources (arXiv, peer-reviewed journals, NASA/ESA data)
@@ -41,10 +68,11 @@
 - Maintain scientific rigor in all analysis and conclusions
 - Rely on trusted sources (textbooks, arXiv, and similar) when researching astrophysics and cosmology concepts
 - When stating new facts or explaining concepts, provide links to citations when possible
-- We will be focusing on a research problem
 
-## EMERGENCY RECOVERY:
-If session is lost, read `complete_chat_history.txt` to restore full context.
+## Key Phrases to Use:
+- Start session: "Read the chat history and restore context"
+- End session: "Save our complete chat history"
+
 
 ---
 *This file ensures consistent AI behavior across all sessions*
