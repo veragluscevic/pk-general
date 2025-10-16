@@ -6,7 +6,7 @@ Based on testing results, this provides the best functional form
 for describing IDM transfer functions with minimal parameters.
 
 The recommended form is:
-T_IDM(k) / T_ΛCDM(k) = 1 + A * (k/k_c)^n / (1 + (k/k_c)^m)
+$$\frac{T_{\mathrm{IDM}}(k)}{T_{\Lambda\mathrm{CDM}}(k)} = 1 + A \frac{(k/k_c)^n}{1 + (k/k_c)^m}$$
 
 This captures the essential physics with just 4 parameters:
 - A: Amplitude of deviation

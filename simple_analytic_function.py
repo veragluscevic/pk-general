@@ -4,6 +4,11 @@ Simplified analytic transfer function for interacting dark matter.
 
 Based on the physics of IDM, this provides a more robust functional form
 that captures the essential features with fewer parameters.
+
+Three simplified forms are implemented:
+1. Simple: $\frac{T_{\mathrm{IDM}}(k)}{T_{\Lambda\mathrm{CDM}}(k)} = 1 + A \left(\frac{k}{k_c}\right)^n$
+2. Exponential: $\frac{T_{\mathrm{IDM}}(k)}{T_{\Lambda\mathrm{CDM}}(k)} = 1 + A \exp\left(-\frac{k}{k_c}\right)$
+3. Power law: $\frac{T_{\mathrm{IDM}}(k)}{T_{\Lambda\mathrm{CDM}}(k)} = \left(\frac{k}{k_c}\right)^n$
 """
 
 import numpy as np
