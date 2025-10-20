@@ -5,6 +5,11 @@
 ### Project Context:
 - Project Repository: `/Users/veragluscevic/research/repositories/pk-general`
 
+### Session Start Protocol:
+1. ALWAYS read `complete_chat_history.txt` in the project repository first
+2. Restore full context from previous sessions
+3. Continue seamlessly from where we left off
+4. Reference previous decisions and progress
 
 ### Session Management Rule:
 - ONE SESSION = ONE PROJECT: Each session focuses on a single project
@@ -12,6 +17,21 @@
 - Session context is determined by what we're actually working on, not current directory
 - Maintains clear project boundaries and prevents context contamination
 
+### Session End Protocol:
+1. ALWAYS save complete chat history to `complete_chat_history.txt`
+2. APPEND to existing content - NEVER overwrite
+3. Add clear session separators with timestamps
+4. Include every user message and assistant response verbatim
+5. AUTOMATICALLY save and commit ALL files created during session
+6. When user prompts "save chat history", immediately:
+   - Add all new/modified files to git
+   - Commit with descriptive message
+   - Ensure no data loss occurs
+
+## EMERGENCY RECOVERY:
+- If session is lost, read `complete_chat_history.txt` to restore full context
+- Check git log for recent commits if chat history is corrupted
+- Restore from last successful commit if needed
 
 ### GitHub Authentication:
 - Prefer SSH keys over HTTPS tokens
@@ -31,6 +51,8 @@
 - Never lose any files created during the session
 
 ### Standard File Structure:
+- `complete_chat_history.txt` - Session continuity
+- `README.md` - Project documentation
 - `.cursorrules` - AI behavior rules
 - `{PROJECT_NAME}.md` - Project-specific notes
 
@@ -47,7 +69,9 @@
 - Rely on trusted sources (textbooks, arXiv, and similar) when researching astrophysics and cosmology concepts
 - When stating new facts or explaining concepts, provide links to citations when possible
 
-
+## Key Phrases to Use:
+- Start session: "Read the chat history and restore context"
+- End session: "Save our complete chat history"
 
 
 ---
